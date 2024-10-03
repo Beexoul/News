@@ -18,15 +18,17 @@ const NewsBoard = () => {
       <h2 className="text-center">
         Latest <span className="badge bg-danger"> News</span>
       </h2>
+      <div style={{display:"flex",alignItems:"center",justifyContent:"center",flexWrap:"wrap"}}>
       {articles.map((news, index) => (
         <NewsItem 
-          key={index} 
-          title={news.title} 
-          description={news.description} 
-          src={news.urlToImage} 
-          url={news.url} 
+        key={index} 
+        title={news.title} 
+        description={news.description} 
+        src={news.urlToImage} 
+        url={news.url} 
         />
       ))}
+      </div>
     </div>
   );
 };
